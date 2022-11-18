@@ -1,0 +1,25 @@
+<a routerLink="/administracion/crear-cliente" class="btn">Nuevo Cliente</a>
+<table class="table responsive">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Apellidos</th>
+            <th>Email</th>
+            <th>Tipo Documento</th>
+            <th>Numero de Documento</th>
+            <th>Editar</th>
+            <th>Eliminar</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let p of listadoRegistros">
+            <td>{{p.nombre}}</td>
+            <td>{{p.apellidos}}</td>
+            <td>{{p.email}}</td>
+            <td>{{p.tipoDocumento}}</td>
+            <td>{{p.numDocumento}}</td>
+            <td><a routerLink="/administracion/editar-cliente/{{p.id}}" class="btn "><i class="material-icons">border_color</i></a></td>
+            <td><a routerLink="/administracion/eliminar-cliente/{{p.id}}" class="btn red darken-3"><i class="material-icons">delete_sweep</i></a></td>
+        </tr>
+    </tbody>
+</table>

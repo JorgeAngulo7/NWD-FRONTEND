@@ -1,0 +1,63 @@
+<section>
+    <div class="show">
+        <span>Formulario de edición de clientes</span>
+        <p id="description">
+            En este formulario puedes editar los datos del cliente, en caso de que sea necesario.
+            Nuevamente recuerda tener todos los campos diligenciados para que no presente errores.
+        </p>
+    </div>
+    <form [formGroup]="fgValidador" (ngSubmit)="editarCliente()" method="post"
+        id="survey-form">
+        <input type="hidden" formControlName="id" name=""/>
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="input-field col s4">
+                <input formControlName="nombre" id="nombre" type="text"
+                    class="validate" required="">
+                <label id="nombre-label" for="nombre" class="active">Nombre</label>
+            </div>
+            <div class="input-field col s4">
+                <input formControlName="apellidos" id="apellidos" type="text"
+                    class="validate" required="">
+                <label id="apellidos-label" for="apellidos" class="active">Apellidos</label>
+            </div>
+            <div class="input-field col s4">
+                <input formControlName="email" id="email" type="email"
+                    class="validate" required="">
+                <label id="Email-label" for="email" class="active">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <select formControlName="tipoDocumento">
+                    <option value="" disabled selected>Selecciona el tipo de
+                        documento</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="CE">Cédula de Extranjería</option>
+                    <option value="NIT">NIT</option>
+                </select>
+                <label>Tipo de documento</label>
+            </div>
+            <div class="input-field col s6 ">
+                <input formControlName="numDocumento" id="numDoc" type="text"
+                    class="validate" required="">
+                <label id="numDoc-label" for="numDoc" class="active">Número de documento</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s4">
+                <input type="date" class="form-control" formControlName="fechaNacimiento" />
+                <label>Fecha de nacimiento (dd-mm-yy)</label>
+            </div>
+            <div class="input-field col s4">
+                <input formControlName="telefono" id="telefono" type="tel"
+                    class="validate" required="">
+                <label id="telefono-label" for="telefono" class="active">Número de celular</label>
+            </div>
+        </div>
+        <button id="submit" class="btn waves-effect waves-light" type="submit"
+            name="action">Enviar
+        </button>
+    </form>
+</section>

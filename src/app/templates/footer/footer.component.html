@@ -1,0 +1,25 @@
+<footer class="page-footer teal darken-4">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Descripción</h5>
+                <p class="grey-text text-lighten-4">El sistema de gestión de clientes desarrollado en Loopback para el backend y para el Frondend AngularJs en el ciclo 4 del proyecto MisiónTic.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li *ngIf="inicioSesion" ><a routerLink="/administracion/clientes" class="grey-text text-lighten-4">Clientes</a></li>
+                    <li *ngIf="inicioSesion"><a routerLink="/administracion/vehiculos" class="grey-text text-lighten-4">Vehículos</a></li>
+                    <li *ngIf="inicioSesion"><a routerLink="/seguridad/cambio-clave" class="grey-text text-lighten-4">otro</a></li>
+                    <li *ngIf="!inicioSesion"><a routerLink="/seguridad/login" class="grey-text text-lighten-4">Iniciar Sesión</a></li>
+                    <li *ngIf="inicioSesion"><a routerLink="/seguridad/cerrar-sesion" class="grey-text text-lighten-4">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2022 Copyright MisiónTic UdeCaldas
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,22 @@
+
+<nav class="teal darken-3">
+    <div class="nav-wrapper">
+        <a routerLink="/" class="brand-logo">Sistema de gestión de clientes</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i
+                class="material-icons">menu</i></a>
+        <ul class="right hide-on-med-and-down">
+            <li *ngIf="inicioSesion"><a routerLink="/administracion/clientes">Clientes</a></li>
+            <li *ngIf="inicioSesion"><a routerLink="/administracion/vehiculos">Vehículos</a></li>
+            <li *ngIf="inicioSesion"><a routerLink="/seguridad/cambio-clave">otro</a></li>
+            <li *ngIf="!inicioSesion"><a routerLink="/seguridad/login">Iniciar Sesión</a></li>
+            <li *ngIf="inicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesión</a></li>
+        </ul>
+    </div>
+</nav>
+<ul class="sidenav" id="mobile-demo">
+    <li *ngIf="inicioSesion"><a routerLink="/administracion/clientes">Clientes</a></li>
+    <li *ngIf="inicioSesion"><a routerLink="/administracion/vehiculos">Vehículos</a></li>
+    <li *ngIf="inicioSesion"><a routerLink="/seguridad/cambio-clave">otro</a></li>
+    <li *ngIf="!inicioSesion"><a routerLink="/seguridad/login">Iniciar Sesión</a></li>
+    <li *ngIf="inicioSesion"><a routerLink="/seguridad/cerrar-sesion">Cerrar Sesión</a></li>
+</ul>

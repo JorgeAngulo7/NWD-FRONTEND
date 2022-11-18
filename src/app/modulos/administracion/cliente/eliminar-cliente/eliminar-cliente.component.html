@@ -1,0 +1,62 @@
+<section>
+    <div class="show">
+        <span>Eliminar Cliente</span>
+        <p id="description">
+            Revisa bien la información del cliente antes de eliminar al cliente.
+        </p>
+    </div>
+    <form [formGroup]="fgValidador" (ngSubmit)="eliminarCliente()" method="post"
+        id="survey-form">
+        <input type="hidden" formControlName="id" name=""/>
+        <div class="row">
+        </div>
+        <div class="row">
+            <div class="input-field col s4">
+                <input formControlName="nombre" id="nombre" type="text"
+                    class="validate" required="">
+                <label id="nombre-label" for="nombre" class="active">Nombre</label>
+            </div>
+            <div class="input-field col s4">
+                <input formControlName="apellidos" id="apellidos" type="text"
+                    class="validate" required="">
+                <label id="apellidos-label" for="apellidos" class="active">Apellidos</label>
+            </div>
+            <div class="input-field col s4">
+                <input formControlName="email" id="email" type="email"
+                    class="validate" required="">
+                <label id="Email-label" for="email" class="active">Email</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s6">
+                <select formControlName="tipoDocumento">
+                    <option value="" disabled selected>Selecciona el tipo de
+                        documento</option>
+                    <option value="CC">Cédula de Ciudadanía</option>
+                    <option value="CE">Cédula de Extranjería</option>
+                    <option value="NIT">NIT</option>
+                </select>
+                <label>Tipo de documento</label>
+            </div>
+            <div class="input-field col s6 ">
+                <input formControlName="numDocumento" id="numDoc" type="text"
+                    class="validate" required="">
+                <label id="numDoc-label" for="numDoc" class="active">Número de documento</label>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-field col s4">
+                <input type="date" class="form-control" formControlName="fechaNacimiento" />
+                <label>Fecha de nacimiento (dd-mm-yy)</label>
+            </div>
+            <div class="input-field col s4">
+                <input formControlName="telefono" id="telefono" type="tel"
+                    class="validate" required="">
+                <label id="telefono-label" for="telefono" class="active">Número de celular</label>
+            </div>
+        </div>
+        <button id="submit" class="btn waves-effect  red darken-3" type="submit"
+            name="action">Eliminar
+        </button>
+    </form>
+</section>

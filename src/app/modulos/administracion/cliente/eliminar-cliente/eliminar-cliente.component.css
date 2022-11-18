@@ -1,0 +1,34 @@
+.show:hover #description,
+#description:hover {
+    display: block;
+}
+
+.show{
+    text-align: center;
+    width: 100%;
+    margin: auto;
+    font-size: 20px;
+    font-weight: 600;
+    color: #004d40;
+}
+.show p{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+    font-size: 15px;
+    font-weight: 400;
+    color: #9e9e9a;
+}
+
+#description {
+    text-align: center;
+    display: none;
+    -webkit-transition: display 30s;
+    transition: display 30s;
+}
+
+section {
+    background-color: #efefef;
+    margin: 0rem !important;
+    padding: 2rem;
+}
